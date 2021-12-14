@@ -8,7 +8,7 @@
 <head>
     <meta charset='UTF-8'>
     <title>Lewis Survey</title>
-    <link rel="stylesheet" href="lewis-survey.css">
+    <link rel="stylesheet" href="lewis-survey-pt2.css">
 </head>
 
 <body style="background-color:#969892;"></body>
@@ -127,12 +127,12 @@
             <h3>You may select multiple here, but please explain why</h3>
             <br />
             <h4>
-            St. Charles Borromeo <input type="_checkbox" name="answer5" value="st. charles borromeo">
-            Art & Science Building <input type="_checkbox" name="answer5" value="Art & Science Building">
-            Residence Hall <input type="_checkbox" name="answer5" value="Residence Hall">
-            Student Center <input type="_checkbox" name="answer5" value="Student Center">
-            Aviation Facility <input type="_checkbox" name="answer5" value="Aviation Facility">
-            Outdoor Campus Examples include but aren't limited too: Entrances, Location, Scenory <input type="_checkbox" name="answer1" value="Outdoor Campus">
+            St. Charles Borromeo <input type="checkbox" name="answer5" value="st. charles borromeo">
+            Art & Science Building <input type="checkbox" name="answer5" value="Art & Science Building">
+            Residence Hall <input type="checkbox" name="answer5" value="Residence Hall">
+            Student Center <input type="checkbox" name="answer5" value="Student Center">
+            Aviation Facility <input type="checkbox" name="answer5" value="Aviation Facility">
+            Outdoor Campus Examples include but aren't limited too: Entrances, Location, Scenory <input type="checkbox" name="answer1" value="Outdoor Campus">
             </h4>
             <br /><br />
             <h3>Please comment below why you chose your answer:</h3>
@@ -143,16 +143,29 @@
 
 
         </form></center>
+        <title>Click the botton to send email to me.</title>
+        <script type="text/javascript">
+            function showMessage() {
+                alert("Thank you for participating in the survey");
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <b><h3>Click on button to display message: </b></h3><br />
+            <br />
+            <input type="button" id="btnShowMsg" value="Send Survey!" onClick="showMessage()" />
+        </center>
         <!--
 Below is how I tried to make it submit to my email, I was having trouble with creating a solution to this.
 I was thinking it maybe because I was using Azure, but I'm not sure. Through Fromsubmit, I was getting
 a message that stated I was in an HTML file and need to be in a web browser. I tried opening the
 website from Azure and I was still having the same issue.
-        -->
+        
         <center><form action="https://formsubmit.co/angleafs58@gmail.com" method="POST">
             <input type="hidden" name="_subject" name="answer1" value="Email From Survey!">
             <button type="submit">Send</button>
        </form>
-       
+       -->
 </body>
 </html>
